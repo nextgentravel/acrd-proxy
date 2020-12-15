@@ -8,10 +8,9 @@ const morgan = require("morgan");
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
 // Configuration
-const PORT = 8080;
+const PORT = process.env.port || 8080;
 const HOST = "localhost";
 const API_SERVICE_URL = process.env.API_SERVICE_URL;
-
 
 // Logging
 app.use(morgan('dev'));
